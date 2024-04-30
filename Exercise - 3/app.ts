@@ -20,15 +20,20 @@ console.log(person_name.toLowerCase());
 
 
 //                       ===========> TITLE CASE <==========
+let myName: string = "shumaila rehman";
+let words :string []= myName.split(" ");
+let titleCase = " ";
+for(let word of words){
 
-let first = person_name.charAt(0);
-console.log(first.toUpperCase());
-
-let rem = person_name.slice(1);
-console.log(rem);
-console.log(first+rem);
+    titleCase += word.charAt(0).toUpperCase()+ word.slice(1).toLowerCase()
+}
 
 
+console.log(titleCase);
 
+// another way..
+
+//                          regit (fix letters)
+console.log(myName.replace(/\bw/g,c =>c.toUpperCase()));
 
 
